@@ -1,0 +1,1671 @@
+Java
+
+OBJECT class is superclass for all objects
+
+
+JAVA Works in APPLICATION LAYER
+
+
+PLATFORM INDEPENDANT =>
+Compiler compiles code and convert it into byte code.
+Byte code is platform independant and run on any system.
+Only condition to run bytecode is system should have JRE
+
+
+
+
+
+Features of Java =>
+Simple
+Object Oriented
+Platform Independant
+Security				- No Pointers,  It has EXCEPTION HANDLING
+Robust					- Memory Management (Garbage Collection)
+Multithreading
+Interpreted
+Dynamic					- loading of classes
+
+
+
+BREAK	&	CONTINUE
+Break	 ->	Terminates the loop
+Continue ->	Skips to next iteration
+
+
+
+We can create .java file without name (EMPTY)
+
+
+
+
+Robust	-	Garbage collection, Exception Handling
+
+
+NOT PURE OOP Language bcz it supports primitive data types
+
+
+
+JIT interpreter 		*******************************************************************************
+COnverts BYTECODE into     NATIVE MACHINE code
+It is part of JRE, used to get better performance of java app at RUNTIME
+
+
+
+
+
+
+
+Static Binding  -	Compile time Polymorphism  (Early Binding)
+Association of Method Call and Method Implementation      at COMPILE TIME
+Method Overloading	
+	- correct method to be called is decided at compile time
+
+
+Dynamic Binding -  	Runtime Polymorphism  (Late Binding)
+Association of Method Call and Method Implementation 	  at  RUNTIME
+Method Overriding	
+	- correct method is decided at runtime based on object type
+
+
+
+
+
+
+
+Classloader
+During execution of BYTECODE it loads CLASSES and INTERFACES  dynamically
+
+
+JVM  vs  JRE  vs  JDK
+JVM is Virtual Machine
+It allows java program to run on any machine
+Executes java bytecode
+
+JRE (Java Runtime Environment)
+It is implemntation of JVM + other libraries
+provide Runtime Environment
+
+JDK
+It is complete solution
+provides JRE with all other java development tools
+
+
+
+
+Heap -  Dynamic Memory Allocation
+Stack - Static. store local varibles		Methods =    peek(),   empty(),    push(),    pop()
+
+
+Access Specifiers
+Public	-	Access ANywhere
+private	-	Access within same class
+protected - 	Access within same package and its subclasses
+default	-	Within same package
+
+
+
+
+
+C++   vs   Java
+C++ has pointer,  Java doesnt
+Platform dependant,   not
+used for System Programming,    Application Programming
+
+
+
+
+String pool
+memory space in HEAP where all strings are stored
+When new object is created, it checked in string pool
+	If present then same reference is returned to var
+	Otherwise new object is created
+
+
+
+
+Package -
+Group of similar classes and interfaces
+1. In-built		Java.Lang
+2. User defined
+
+
+
+
+Data Types
+Primitive:
+	byte
+	char
+	int
+	short
+	long
+	boolean
+	float
+	double
+
+
+Non-Primitive:
+	String
+	Array
+	Class
+	Object
+	Interface
+
+
+
+
+
+Wrapper Classes need:
+to represent primitive data types as OBJECT
+OBJECT Class encapsulates PRIMITIVE Data Types
+IMMUTABLE
+
+AUTOBOXING
+Converting Primitive data type -> WRAPPER class
+
+UNBOXING
+Convert  WRAPPER class ->  Primtive data type
+
+
+
+
+INSTANCE
+Accessible in whole object
+
+LOCAL
+for METHOD only scope
+
+
+
+
+
+equals       vs     ==  (equality)
+equals  ->	It checks contents of 2 objects are equal or not
+	CONTENT Comparison
+	different methods	(using new Keyword)
+	String str1 = new String("InterviewBit");
+	String str2 = "InterviewBit";
+
+equality ( == )	->	It checks equality of REFERENCES.   Both objects are pointing to same memory location
+	ADDRESS Comparison
+	String str1 = "InterviewBit";
+	String str2 = "InterviewBit";
+
+
+
+
+main()  method can be overloaded,    but JVM will only call method having syntax of
+	public static void main(String args[])
+
+
+
+OOPS
+Class - Logical blueprint to create object
+Object - Physical instance created
+
+
+Constructor
+special method used to initialize state of object
+calls automatically when object is created
+
+
+constructor dont have RETURN TYPE
+cant be INHERITED
+cant be FINAL
+cant be STATIC
+
+
+Constructor OVERLOADING		- different arguments
+
+
+Types =>
+1. Default
+2. Parameterized
+
+
+
+
+
+
+
+Static Method
+Can call the method without creating object
+cannot be instantiated
+
+STATIC executed before main method
+
+
+
+
+
+Static		Method  Var			No Overriding
+FInal		Method	Var	CLASS		NO Inheritance		No Overriding
+
+
+
+Final	=>
+Variable	- NO modification
+Method		- NO OVERRIDING
+Class		- NO INHERITANCE
+
+
+Static  =>
+Variable	- NO modification
+Method		- NO OVERRIDING			(Bcz It uses Static Binding at COMPILE TIME,  but OVERRIDING is done at RUNTIME)
+
+
+
+_____________
+
+Encapsulation
+Grouping related data and methods together, hiding internal details
+
+_______________
+
+
+_________________________
+Inheritance
+__________________________
+
+is-a relationship
+child class inherits properties and behaviors from existing superclass
+
+
+TYPES:
+Single	
+Hierarchical	
+Multilevel	- many child,   1 super in 1 line
+Multiple	- 1 child    more superclass
+
+
+
+
+Multiple inheritance is not supported in java
+
+ASSOCIATION =>
+
+Aggregation	-	WEAK Relationship
+has-a relationship
+It is a relationship between two classes where one class contains another class as a part.  contained class can exist independently
+Example: A university has departments. Departments can exist independently.
+
+
+Composition	-	STRONG Relationship
+It is a stronger form of aggregation where one class is composed of another class, and the composed class has no independent existence
+Example: Computer and CPU
+
+
+
+this keyword	=>
+reference variable
+refer to same class
+used to call default constructor of SAME class
+
+super keyword	=>
+used to refer to immediate parent class object
+used to invoke parent class methods and constructor
+used to call default constructor of PARENT class
+
+
+this  vs  super
+Cant use both of this in constructor
+Bcz they need to be the 1st statement in constructor
+
+
+
+
+_______________
+Polymorphism
+_______________
+ability of object to take multiple forms
+
+Method overloading
+same methods are written with -
+by changing no. of arguments
+by changing data type
+
+
+
+
+Method overriding
+when a subclass provides a specific implementation for a method that is already defined in its superclass
+only behavior is changed
+
+
+
+
+
+
+STATIC
+STATIC methods cannot be overloaded	(Bcz overloading is done at RUNTIME)
+	And Execution of static methods is done at COMPILE TIME
+
+
+
+Final class
+No Inheritance
+
+Final method
+No  OVERRRIDING
+
+
+
+Abstraction
+Hiding implementation and only showing functionality
+1. Abstract class
+2. Interface
+
+
+Abstract class :
+If class contains atleast 1 abstract method it is called as ABSTRACT CLASS
+
+It can have abstract methods, non-abstract methods, constructors, and static methods
+It cannot be instantiated  (no object can be created for it)
+Bcz it have abstract methods which needs to be implemented in subclass
+
+
+	
+FINAL   +   ABSTRACT   keyword cannot be mixed
+STATIC  +   ABSTRACT	--||--				- we cant implement abstract methods in subclass. static method dont allow to crate INSTANCE
+
+
+
+
+INTERFACE
+Collection of abstract method and static methods
+Used to get full abstraction and multiple inheritance
+Contains all ABSTRACT METHODS
+'implements'  keyword
+
+No CONSTRUCTOR
+
+CLASS that implements INTERFACE must provide implementation for all methods in interface
+
+
+			Multiple Inheritance  ==>
+			Class implements 2 interface	A and B
+			Both interface extends to 2 diff classes C and D
+
+
+
+
+
+
+
+4 pillars of OOPS
+1. Encapsulation
+Grouping related data and methods together, hiding implementation details
+Ex.  TV Remote control. 
+	It has many buttons (methods) for various functionalities
+	These actions are encapsulated within remote, user does not need to know about its internal workings
+
+Ex2. Medical CAPSULE
+
+
+2. Abstraction
+Hiding implementation and showing functinality only
+Ex.  Car
+	In car u dont need to know about engine or transmission
+	u interact with car through abstractions like steering wheel, accelerator, brake.
+	no need to learn its internal workings
+
+Ex2. ATM Machine
+
+
+3. Inheritance
+Ex.  Animal hierarchy
+	Animal has common properties like age, name
+	Dog and Cat 2 diff classes, they inherit this peoperty from animal superclass
+
+
+4. Polymorphism
+Ex. Shape class with method 'Draw"
+	Circle, Rectangle, Square each have its own implementation for 'draw" method
+	variable of type SHape can refer to object of any type  Circle, Rectangle
+
+Ex2. Man with diff roles
+
+
+
+
+Encapsulation means  Grouping related data and methods together
+	for data protection  by hiding implementation details
+	
+Abstration means simplifying complex system hiding implementation details
+	to reduce complexity of system
+	to create simplified view of system
+
+
+
+
+
+
+
+
+
+EXCEPTION HANDLING
+Checked
+checked at COMPILE TIME
+Ex. SQLException, IOException
+
+Unchecked
+checked at RUNTIME
+Ex. Arithmetic, NullPointerException
+
+THROWABLE is base class
+
+
+
+In Try - Catch - Finally  =>
+
+    try {
+           throw new NullPointerException("NullPointerException");
+    } 
+    catch (ArithmeticException e) {
+            System.out.println("ArithmeticException");
+    } 
+    catch (NullPointerException e) {
+            System.out.println("NullPointerException");
+    } 
+    catch (Exception e) {
+            System.out.println("Exception");
+    } 
+    finally {
+            System.out.println("Finally");
+    }
+
+
+
+if try throws any exception
+it will match with catch block having specific exception   Ex.  NullPointerException
+	If not found then print normal Exception e
+
+
+
+
+FINALLY block wil not execute if    ERROR Occurs
+
+
+
+throw  vs  throws
+throw is used inside method
+used to explicitely throw exception
+Only 1 exception can be throw at a time
+
+throws is used with method signature
+It tells which exceptions might be thrown
+It can throws multiple exceptions 
+
+
+
+
+
+Create custom defined exception
+1. Create custom exception CLASS  extends  Exception
+2. Implement constructors
+3. In main method try block, throw this Exception
+
+
+
+
+
+Strings are IMMUTABLE	- Bcz of MULTITHREADING
+values cannot be changed after they are created
+
+
+StringBuffer   and   StringBuilder
+used for mutable strings
+
+StringBuffer
+SYnchronized,  THREAD SAFE
+SLOWER
+
+
+StringBuilder
+Not Synchronized, NOT THREAD SAFE
+FASTER
+
+_________________
+SYnchronization:    control of accessing shared resources in multi threaded environment
+_________________
+
+
+
+
+
+Garbage Collection
+automatically identifies and removes unused objects from the memory to free up resources.
+
+
+
+
+
+
+
+
+
+Singleton class
+Class which cannot be instantiated more than 1 time
+
+
+
+************************************************************
+
+Traversing Hashmap key value pairs using lambda expression
+hashmap.forEach((key, value) -> {
+	print  Key and Value
+});
+
+
+**************************************************************
+
+Lambda Expression
+(parameters) -> expression
+
+
+
+
+
+POJO
+fields  +  getter  + setters
+
+
+
+MAVEN
+Build and Project Management tool for Java Projects
+
+
+
+
+
+
+SHALLOW COPY
+	creates new REFERENCE and point to same old object
+	obj2 = obj1
+
+DEEP COPY
+	creates new OBJECT and copy old object into new object
+	obj2 = new object
+
+
+
+
+
+
+
+Java Index starts from 0
+To avoid extra arithmetic calculation to find memory address 
+
+
+
+
+>>	Right Shift			-> Shift each bit to RIGHT and maintain SIgned BIT
+>>>	Right Shift with Trailing 0	-> Shift each bit to RIGHT,   NOT MAINTAIN,      make MSB as 0
+
+*******************************************************************************************************************************************************
+
+
+_______________________________________
+Java Collection Framework
+_____________________________________
+
+
+Collection   INTERFACE
+	It has many SUB-INTERFACE
+
+COllections 	CLASS
+	It gives many pre-defined methods
+	sort(), min(), max()
+	It only has STATIC METHODS	
+
+
+INTERFACES:
+Set
+List
+QUEUE
+DEQUE
+MAP
+
+
+CLASSES:
+ArrayList
+Vector
+LinkedList	-	Doubly linked list.    implements LIST and DEQUE Interfaces
+TreeSet
+STACK	-	LIFO
+
+
+
+SET		- collection of UNIQUE objects
+No duplicates
+1. HashSet		- no ORDER
+2. LinkedHashSet	- maintain INSERTION order
+3. TreeSet		- SORTED ORDER
+
+
+
+
+LIST	->	Duplicates,   Access elements using their INDEX,   MULTIPLE NULL Values
+SET	->	NO Duplicates,  No Accessing,  only 1 NULL Value
+
+
+
+
+
+ArrayList
+ITERATOR is used to traverse ArrayList
+Dynamic
+NOT THREAD SAFE,     for that  use VECTOR
+
+
+
+
+
+HASHMAP    vs    HASHTABLE
+NOt sync		SYnc
+Faster			Slower
+1 key can be NULL	no NULL keys
+
+
+
+
+Comparable      vs    COmparator
+compareTo()			compare(),     equals()
+affects its natural		dont affect original ordering	
+ordering  (Intrinsic)		Extrinsic
+
+
+
+FINAL           FINALLY       		FINALIZE
+keyword		try catch block		use by Garbage collection
+
+
+
+
+
+Iterable      vs     Iterator
+iterator()		hasNext(),   next(),   remove()
+
+	
+
+
+MAP
+Key is UNIQUE
+Values are REPEATED	
+
+
+HASHMAP       		vs      TREEMAP
+Heterogenous elements		Homogenous
+FAST				SLOW
+
+
+Iterator ->
+Universal Iterator
+remove() method is AVALAIBLE
+
+Enumeration ->
+only for LEGACY CLasses		Ex. VECTOR 
+remove() method is NOT AVAILABLE
+
+
+
+
+
+
+
+hashCode()	-   return hash code value
+
+Benefits of Generics:
+No need of TYPECASTING
+TYPE SAFE
+Checked at COMPILE TIME
+
+
+
+
+Array		vs		ArrayList
+Static				Dynamic
+Fixed Size			Changes Dynamically
+Can Store Primitive Datatype	Only store OBJECTS
+	Objects also
+
+
+
+How to reverse ARRAYLIST =>
+Collections.reverse(list)
+
+
+
+
+_____
+JSP		Java Server Pages
+_____
+server-side programming technology used to create dynamic web page using HTML
+jspInit()
+_jspService()
+jspDestroy()
+
+
+Exception handling using   errorPage directive
+
+
+used in  VIEW
+
+JSP Tags  =>
+Declaration	<%!  %>		To declare var or methods
+Scriplet	<%   %>		Write any java code in JSP
+Expression	<%=  %>		To display result
+
+
+
+
+JSP DIrectives =>
+Include
+Page
+Taglib
+
+
+
+Expression Languague (EL) =>
+Allows Dynamic COntent Retrieval and Manipulation
+
+
+No INTERFACE in JSP
+
+
+
+
+
+_________
+JDBC
+________
+Register driver
+Create connection
+Create Statement
+Execute Queries
+Close connection
+
+
+
+Statement
+for normal SQL queries
+for single time query
+
+PreparedStatment
+for dynamic and parameterized queries
+used when we want to execute query multiple times
+
+RESULTSET
+It Represents result of database query, providing Java interface to iterate and access the retrieved data
+
+
+
+Components =>
+Connection
+Statement
+PreparedStatement
+ResultSet
+
+
+
+Types of Drivers =>						ODBC - Open Database COnnectivity
+1. JDBC - ODBC Bridge Driver
+2. Native API Driver
+3. Network Protocol Driver
+4. Thin Driver
+
+
+
+
+
+BLOB	(Binary Large Object)
+CLOB	(Character Large Object)
+
+
+
+
+
+
+Execute			-	Execute SQL Queries.  gives  TRUE   or   FALSE
+ExecuteQuery		-	Used to Execute SELECT Queries only.   Returns the RESULTSET
+ExecuteUpdate		-	Execute Queries that doesnt return anything	(Insert/Update/Delete)
+
+
+
+
+
+
+
+
+
+________
+SERVLET
+___________
+
+
+Server side java program that Handles HTTP Request and generate Dynamic Response
+It Helps in buildng robust web application
+
+
+Lifecycle  =>
+init()
+service()
+destroy()
+
+
+
+Servlet object is created at Time of 1st request
+
+ReuqestDispatcher	-   Call JSP from Servlet
+
+forward()
+sends same request   	  -   occurs server side
+
+sendRedirect()
+sends new request always  -   occurs   client side
+
+
+
+
+
+ServletConfig
+Represents single SERVLET
+provides Config Information for specific servlet
+LOCAL PARAMETER
+
+
+ServletContext
+Represents complete WEB APPLICATIONS
+provides information about Web Application
+GLOBAL PARAMETER
+
+
+
+
+HTTPServlet
+DoGet
+DoPost
+DoDelete
+
+
+Session
+Particular interval of time
+Help server to maintain user specific data for specific time period
+
+
+
+Cookies 
+small pieces of data sent from server and stored on client side
+It maintain state information.
+
+
+COOKIES		vs		HttpSession
+Client SIde			Server SIde
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+__________________________
+Spring
+___________________________
+
+Lightweight and Loosely coupled			framework to build enterprise Java Applications
+Reduce dependancy of 1 object on other
+
+IOC Container
+	BeanFactory		- limited beans
+	ApplicationContext	- unlimited
+
+Types of Configurations:
+XML        and 		Annotations
+
+
+
+
+Dependancy Injection -
+It makes loose coupling between classes
+It is flavor of IOC
+
+ 
+Autowiring - Injecting object dependancies implicitely 
+
+1. XML Based		autowire = byName   or   byType    or  constructor   or    NO
+Constructor Injection		<constructor-arg>
+Setter Injection		<property>
+
+2. Annotation based
+	@Autowired
+
+
+
+20 modules in SPring Framework
+
+CORE,   AOP,   WEB,   TEST
+
+AOP  (Aspect Oriented Programming)
+Seperation of BUSINESS LOGIC from other services
+
+
+
+
+
+
+Spring Beans
+It is object
+Backbone of SPring APplication
+
+
+Bean Scopes
+Singleton	- Stateless
+Prototype	- Statefull				New bean whenever request is made
+Request
+Session
+
+
+
+
+
+
+SPring MVC
+Model	- Data
+View	- Frontend
+COntroller - DispatcherServlet
+
+
+
+
+Spring Validations
+NotNull
+Min
+Max
+SIze
+Pattern
+
+
+
+
+@Bean	->		for Methods
+@Controller  ->		for Class
+
+
+
+
+
+
+
+EXCEPTION HANDLING =>
+@ExceptionHandler
+
+
+
+
+NO NEED TO CREATE OBJECTS EXPLICITELY in prgm
+
+
+______________
+SPring BOOt
+_____________
+
+used to develop Standalone Applications
+uses AUTOCONFIGURATION
+
+It is exension of SPring with embedded HTTP Server (Tomcat)
+
+										Standalone APps - no need of internet. RUn on Local machine
+
+Application.properties		- for app config
+Application.yaml		- for db config
+
+
+
+
+REST API		-  way of accessing web services
+GET
+PUT
+POST
+DELETE
+
+
+
+Actuator
+Monitor HTTP ENdpoints and Manage the application
+
+Provides Endpoints and metrics for app
+
+
+
+
+@Entity
+for Table
+
+
+
+
+STEREOTYPE Annotations
+It marks classes that having multiple roles in app
+1. Component
+2. Service
+3. Repository
+4. COntroller
+
+
+
+
+STARTERS -
+spring-boot-starter
+spring-boot-starter-data-jpa
+
+
+JPA	(Java Persistent API)
+It allows to access data between Java classes and Relational DB
+It follows ORM  (Object Relational Mapping)
+
+
+
+
+
+
+
+___________________________
+MICROSERVICES
+__________________________
+
+Small Independant services that work together
+Each handles specific task
+provide  SCALABILITY
+OPerate Independantly
+Communicate using HTTP protocol
+
+DO 1 specific task very well
+
+
+
+
+
+Monolithic Application
+1 Big application where all software components are assembled and packed
+
+Horizontal Scaling	- Adding more machines in system
+
+
+
+
+DOCKER -
+used to run your java Application on any platform
+
+
+
+
+REST
+Representational State Transfer
+It helps computers to communicate over Internet
+
+
+
+SOA	(Service Oriented Architecture)
+Multiple Services communicates each other through simple data passing
+
+Microservices
+Small Independant services, scalable, do 1 specific task very well
+
+
+
+
+
+_____________________________________________________________________________________________
+
+#############################################################################################
+______________________________________________________________________________________________
+
+
+
+
+
+
+MULTITHREADING
+Process of executing multiple threads simultaneously
+
+How to use Threads -
+1. THREAD Class
+2. RUNNABLE Interface		-> used for MULTIPLE INHERITANCE
+
+
+
+Advantages  =>
+Faster Execution of Tasks
+Reduce no. of Servers
+
+
+
+Program     vs  Process
+Program is set of instructions
+Process means programs under execution
+	
+
+Thread =>
+Smallest unit of execution in process
+
+
+Thread Lifecycle =>
+New: 		Created, not started.
+Runnable: 	Ready, awaiting CPU.
+Blocked: 	On Hold, waiting for permission
+Waiting: 	Taking break until some other thread wakes him up by sending SIGNAL.
+Timed Waiting:  Taking break with timer. it wakes up automatically after that
+Terminated: 	Job completed.
+
+
+
+
+Daemon Threads =
+Low Priority Thread used to perform BACKGROUND Operations,	like Garbage Collection
+Only executes when no other threads are running
+
+
+
+DEADLOCK
+Situation where every thread is waiting for resource which is held by other waiting thread
+	Avoid lock
+
+
+
+
+Sleep()		vs 		wait()
+Static				Not static method
+Does not release lock		Release lock
+in THREADS Class		In OBJECTS CLass
+
+
+
+
+FAILFAST
+used in SINGLE Threaded Environment
+FAST
+It doesnt copy collection
+Does not allow modifications while iteration
+
+
+FAILSAFE
+used in MULTI Threaded Environment
+SLOW
+copy collection
+allow modification
+
+
+
+
+
+
+
+
+
+COnstructor OVERLOADING =>	Define multiple constructors with diff args in class
+Constructor CHAINING =>		Calling 1 constructor from another constructor.			using  this()	and	super()
+
+
+
+new()		-	If we know type of object to create
+newInstance()	-	If we dont know object type, it is given at RUNTIME
+
+
+
+
+
+
+
+MARKER Interface
+No DATA MEMBERS       and      MEMBER FUNCTIONS
+Interfaces without methods
+It helps compiler to get RUNTIME related info regarding OBJECTS
+
+
+
+
+
+
+Process of Garbage collection -		using gc() method
+make it NULL
+
+
+
+
+
+ORDER of specifier doesnt matter in java
+public static void            is same as		static public void
+
+
+
+Static is common for all, need to define 1 time only
+All objects can access it
+	
+
+
+
+
+COnstructor		vs      Methods
+Automatically invoked		Need to invoke explicitely
+NO Return Type			Need RETURN Type
+1 Default Constructor		Multiple methods
+
+
+
+
+If static keyword is removed from main() method
+It gives error  -   NoSuchMethodError
+
+
+
+
+Constructor Chaining -
+Calling 1 Constructor inside other COnstructor       using   'this'   keyword
+
+
+
+
+Object Cloning
+creating exact copy of object
+using	CLONEABLE	interface
+
+
+
+
+
+
+
+
+Serialization
+Convert OBJECT   into   BYTE STREAM
+
+Deserialization
+Convert BYTESTREAM   into    OBJECT
+
+
+
+
+
+
+
+Float	-	0.0f
+Double	-	0.0d
+
+
+
+
+Class variable -
+Variable declared outside method block with  STATIC  keyword
+
+		Instance Variable is CLass Variable without  STATIC keyword
+
+
+
+
+
+Dot operator -
+used to access INTSANCE variables and METHODS  of class Objects
+
+
+
+String creation -
+using literal	""
+	inside  STACK
+	If object present, then it returns EXISTING Object
+
+using new() keyword
+	inside  HEAP
+	It creates new object in HEAP, even if same content object is present
+
+
+
+
+
+Array
+Grouping elements with same Data Type
+String[] names = {}
+int[] numbers = {}
+
+
+
+
+
+
+
+REFLECTION =>
+API that is used to examine or modify the behavior of methods, classes, and interfaces at runtime
+
+It tells us to which class the Objects belongs and   Methods of that class that can be executed
+
+
+________________________________________________
+
+
+
+
+JAVA DESIGN PATTERNS
+1. Creational		- creating objects
+2. Structural		- establishing relationships between them
+3. Behavioral		- managing relationships between objects
+
+
+
+
+
+
+Double Brace Intialization
+Combination of 2 independant processes
+
+
+
+WHy is Java Dynamic ?		->   Bcz of BYTECODE
+
+
+Applet
+Java program that runs in Web Browser
+
+
+JAR
+Java Archive files. like ZIP
+
+WAR
+Web Archive
+used to store XML
+
+
+
+Object Based Programming follows all features of OOPS, Except  INHERITANCE
+Ex. JavaScript
+
+
+
+
+
+
+
+
+
+
+
+______________________________________________
+	
+SQL
+
+_____________________________________________
+
+
+DDL	-	CREATE, ALTER, DROP, TRUNCATE
+DML	-	SELECT, INSERT, UPDATE, DELETE
+DCL	-	GRANT, REVOKE
+TCL	-	COMMIT, ROLLBACK
+
+
+
+Primary Key
+It uniquely identifies each record in table	-  Only 1
+NOt null
+
+
+Foreign Key
+Establishes a link between two tables.
+Refers to the primary key in another table, creating a relationship.
+Can be null
+
+
+
+Unique Key
+Multiple
+can be NULL
+
+
+Normalization in Database	-	It reduces redundancy and helps in data integrity
+1NF	-	Each cell contain single 1 piece of information
+2NF	-	every column should depend on entire primary key, no other partial dependancies
+3NF	-	every column should depend on primary key only, not on other non-key columns
+
+
+
+
+Types of SQL Operators
+Arithmetic
+Logical	-	AND, OR, ISNULL, UNIQUE
+Comparison
+Bitwise
+
+
+View
+Virtual table created from SELECT queries
+They simplify data access by encapsulating complex operations.
+Views enhance security by controlling access to specific columns or rows.
+
+
+
+Joins
+used to combine multiple tables together based on specific condition
+
+1. INNER join
+records that match specific condition
+
+2. LEFT OUTER join
+All from LEFT   +  matched records from RIGHT
+
+3. RIGHT OUTER join
+All from RIGHT   +  matched records from LEFT
+
+4. FULL OUTER join
+All from both LEFT and RIGHT,   for non-matching rows fillng by  NULL
+
+
+
+SELF JOIN -  using Table alias
+		(	AS	)
+
+
+
+ALIAS -  Temporary name assigned to Tables
+	 For execution of specific query
+
+
+
+
+
+IN    and   BETWEEN
+IN	-	used to specify multiple values in WHERE condition using comma ,
+BETWEEN -	used to specify range of values	
+
+
+
+
+DELETE    and    TRUNCATE
+DELETE -	removes rows based on condition, ROLLBACK
+TRUNCATE -	removes all rows from table without condition,    preserve table schema,     NO ROLLBACK
+
+
+
+
+Atomicity: Transactions are all or nothing.
+Consistency: Database values are not modified.
+Isolation: Transactions operate independently.
+Durability: Committed changes are permanent.
+
+
+
+
+
+
+
+DDL -
+CREATE table tablename()
+ALTER  table tablename ADD()
+DROP   table tablename
+TRUNCATE table tablename
+
+
+
+DML -
+SELECT * from tablename
+INSERT into tablename (col1, col2) values(value1, value2)
+UPDATE tablename  SET (col1 = val1) WHERE condition =?
+DELETE FROM tablename WHERE condition
+
+
+
+
+
+Database -
+Collection of data structured into tables, rows, columns
+
+DBMS
+It is interface between DB and end user
+Like FIle Manager
+
+
+
+
+Relational DBMS    ->	SQL		Table	(Rows    Columns)
+Ex. MySQL
+
+Non Relatinal DBMS ->	NO-SQL		Key-value pairs
+Ex. MongoDB
+
+
+
+
+
+
+Stored Procedure
+Already defined code, stored in DB
+Invoked using TRIGERS
+
+
+
+
+
+
+
+TRIGGER
+stored procedure that invokes automatically in response to event
+
+
+
+
+
+
+
+SET Operators
+UNION		- Removes Duplicates rows
+UNION ALL	- DONT REMOVE DUPLICATES
+INTERSECT	- UNIQUE Records in    ASCENDING ORDER
+MINUS		- VALUES from First which does not match with Second
+
+
+
+
+
+
+
+Names starting from A =>
+
+SELECT * from Student WHERE student_name like 'A%';
+
+
+
+
+
+
+
+SQL Aggregate Functions	  	-  7
+AVG()
+COUNT()
+MIN()
+MAX()
+SUM()
+FIRST()
+LAST()
+
+
+
+COmments
+SIngle line	=>	--
+Multi line	=>   /*	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+___________________________________
+COding_____________________________
+
+Reverse String
+=>
+
+public class StringReversal {
+    public static void main(String[] args) {
+        String original = "Hello, World!";
+        String reversed = new StringBuilder(original).reverse().toString();
+
+        System.out.println("Original: " + original);
+        System.out.println("Reversed: " + reversed);
+    }
+}
+
+
+
+
+
+String Palindrome
+=>
+
+        String str = "radar";
+
+        boolean isPalindrome = new StringBuilder(str).reverse().toString().equals(str);
+
+        System.out.println(isPalindrome);
+
+
+
+
+
+
+
+
+
+
+
+Strings are ANagram or NOt
+=>
+
+import java.util.Arrays;
+
+public class AnagramChecker {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        boolean areAnagrams = Arrays.equals(charArray1, charArray2);
+
+        System.out.println(areAnagrams);
+    }
+}
+
